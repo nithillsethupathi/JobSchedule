@@ -1,2 +1,2 @@
 # JobSchedule
-Topological Sort using Depth First Search (DFS) to find the JobSchedule.
+Topological Sort job schedule using Depth First Search (DFS).
