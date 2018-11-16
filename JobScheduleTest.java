@@ -30,7 +30,7 @@ public class JobScheduleTest{
         assertEquals(0, j.getJob(7).getStartTime());
         assertEquals(87, j.minCompletionTime());
     }
-	@Test
+    @Test
     public void sampleTest()
     {
         JobSchedule schedule = new JobSchedule();
@@ -57,4 +57,18 @@ public class JobScheduleTest{
         assertEquals(-1, schedule.getJob(1).getStartTime());
         assertEquals(0,schedule.getJob(2).getStartTime());
     }
+    @Test
+    public void test1(){
+		JobSchedule js = new JobSchedule();
+		js.addJob(5);
+		js.addJob(6);
+		js.addJob(14);
+		js.addJob(1);
+		assertEquals(14,js.minCompletionTime());
+		js.getJob(1).requires(js.getJob(2));
+		assertEquals(20,js.minCompletionTime());
+		js.getJob(2).requires(js.getJob(1));
+		assertEquals(-1,js.getJob(1).getStartTime());
+		assertEquals(0,js.getJob(3).getStartTime());
+	}
 }
