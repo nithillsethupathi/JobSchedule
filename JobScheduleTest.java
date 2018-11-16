@@ -58,4 +58,3 @@ public class JobScheduleTest{
         assertEquals(0,schedule.getJob(2).getStartTime());
     }
 }
-}
