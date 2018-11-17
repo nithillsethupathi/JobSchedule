@@ -76,7 +76,7 @@ public class JobScheduleTest{
     }
     @Test
     public void test2(){
-        schedule = new JobSchedule();
+        JobSchedule schedule = new JobSchedule();
         schedule.addJob(5);
         schedule.addJob(2);
         schedule.addJob(10);
